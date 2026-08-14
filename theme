@@ -214,15 +214,15 @@ apply_wallpaper() {
 		WALLPAPER="$THEME"
 	fi
 
-	wp_file="$HOME/Pictures/.wallpaper/$WALLPAPER" #set path of desired wallpaper
-	theme_wp_file="$HOME/Pictures/.wallpaper/$THEME" #set path of specified theme using -t
+	wp_file="$HOME/Bilder/.wallpaper/$WALLPAPER" #set path of desired wallpaper
+	theme_wp_file="$HOME/Bilder/.wallpaper/$THEME" #set path of specified theme using -t
 
 	if [[ -f "$wp_file" ]]; then #check if desired wallpaper exists and set it
-		ln -sfn "$wp_file" "$HOME/Pictures/.wallpaper/wallpaper"
+		ln -sfn "$wp_file" "$HOME/Bilder/.wallpaper/wallpaper"
 		if [ "$VERBALIZE" = true ]; then callout "l" "wallpaper" "${wp_file:t}"; fi
 	elif [[ -n "$THEME" && -f "$theme_wp_file" ]]; then #check if the optionally specified theme exists and has a matching wallpaper
 		echo "Wallpaper '$WALLPAPER' existiert nicht. Fallback zu $THEME" >&2
-		ln -sfn "$theme_wp_file" "$HOME/Pictures/.wallpaper/wallpaper"
+		ln -sfn "$theme_wp_file" "$HOME/Bilder/.wallpaper/wallpaper"
 	else #fallback if there's neither a matching wallpaper nor a standard theme
 		echo "Kein gültiges Wallpaper gefunden und kein Fallback vorhanden. Abbruch." >&2
 		exit 1

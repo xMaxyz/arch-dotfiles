@@ -14,7 +14,7 @@ environment {
     NIRI_USER_FILEMANAGER "kitty -e yazi"
     NIRI_USER_MENU "fuzzel"
     NIRI_USER_BROWSER "firefox"
-    NIRI_USER_MUSICPLAYER "tauonmb"
+    NIRI_USER_MUSICPLAYER "elisa"
     NIRI_USER_MUSICSTREAMER "kitty -e rs-pug"
 }
 

@@ -8,28 +8,29 @@ syntax on
 set number
 set cursorline
 
-set tabstop=3
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 set smartcase
 set showmode
 set hlsearch
 set showmode
 
-set wildmenu
-set wildmode=list:longest
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+set autoindent
+set smartindent
+filetype plugin indent on
 
+inoremap jk <Esc>
 
-" -----SCRIPT----- {{{
-
-" This will enable code folding.
-" Use the marker method of folding.
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
-
-
-
-" }}}
+inoremap ( ()<Left>
+inoremap (<CR> (<CR>)<Esc>O
+inoremap [ []<Left>
+inoremap [<CR> [<CR>]<Esc>O
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap ' ''<Left>
+inoremap '' ''''<Left><Left>
+inoremap ''<CR> ''<CR>''<Esc>O
+inoremap " ""<Left>
 

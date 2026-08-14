@@ -20,7 +20,9 @@ binds {
     //Keybinds to start programs
     Mod+X hotkey-overlay-title="Open a Terminal" { spawn-sh "$NIRI_USER_TERMINAL"; }
     Mod+Space hotkey-overlay-title="Run an Application" { spawn-sh "$NIRI_USER_MENU"; }
+    Mod+Shift+Space { spawn-sh "$NIRI_USER_MENU --launch-prefix prime-run"; }
     Mod+E hotkey-overlay-title="Run file manager" { spawn-sh "$NIRI_USER_FILEMANAGER"; }
+    Mod+Shift+E { spawn-sh "dolphin"; }
     Mod+B hotkey-overlay-title="Run Browser" { spawn-sh "$NIRI_USER_BROWSER"; }
     Mod+T hotkey-overlay-title="Run Task Manager" { spawn-sh "$NIRI_USER_TASKMANAGER"; }
     Mod+M hotkey-overlay-title="Run Music Player" { spawn-sh "$NIRI_USER_MUSICPLAYER"; }
@@ -263,7 +265,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
+    Mod+Ctrl+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
